@@ -37,14 +37,16 @@ class MarkovMachine {
 
   makeText(numWords = 100) {
 
+    let keys = Object.keys(this.markovObj)
+
     // Test if string is empty
-    if ((Object.keys(this.markovObj)).length === 0) {
+    if (keys.length === 0) {
       return null;
     }
 
     // Initialize first word of markov string.
-    let randomWordIdx = Math.floor(Math.random() * Object.keys(this.markovObj).length)
-    let currentWord = Object.keys(this.markovObj)[randomWordIdx];
+    let randomWordIdx = Math.floor(Math.random() * keys.length)
+    let currentWord = keys[randomWordIdx];
     let markovString = currentWord;
     let wordCount = 1;
 

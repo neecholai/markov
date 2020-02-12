@@ -1,6 +1,8 @@
 // Tests for markov
 
-const { MarkovMachine } = require('./markov');
+const {
+    MarkovMachine
+} = require('./markov');
 
 describe("Test markov machine ", function () {
     let mm;
@@ -26,6 +28,15 @@ describe("Test markov machine ", function () {
         let mm3 = new MarkovMachine("");
         expect(mm3.makeText(10)).toEqual(null);
     });
+
+    // Test makeChains()
+    test("All of the words in input should be keys in markov object", function () {
+        let expectedKeys = ['the', 'cat', 'in', 'hat'];
+        for (key in this.markovObj) {
+            expect(expectedKeys.indexOf(key)).not.toEqual(-1);
+        }
+    })
+
 
 
 
