@@ -7,5 +7,12 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "bufferutil": "^4.0.1",
+    "canvas": "^2.6.1",
+    "jest": "^25.1.0",
+    "jsdom": "^15.0.0",
+    "utf-8-validate": "^5.0.2"
+  }
 }
